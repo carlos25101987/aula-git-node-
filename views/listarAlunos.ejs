@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>Dashboard</h2>
+            <% if(bancoAlunos.length>0) {%>
+        </section>
+        <table>
+            <tr>
+                <th>matricula</th>
+                <th>Nome</th>
+                <th>email</th>
+                <th>turma</th>
+                <th>sexo</th>
+                <th>telefone</th>
+                <th>endereço</th>
+                <th>respensavel</th>
+                <th colspan="2">ações</th>
+            </tr>
+            <% bancoAlunos.forEach(aluno=> { %>
+                <tr>
+                    <td>
+                        <%= aluno.matricula %>
+                    </td>
+                    <td>
+                        <%= aluno.nome %>
+                    </td>
+                    <td>
+                        <%= aluno.email %>
+                    </td>
+                    <td>
+                        <%= aluno.turma %>
+                    </td>
+                    <td>
+                        <%= aluno.sexo %>
+                    </td>
+                    <td>
+                        <%= aluno.telefone %>
+                    </td>
+                    <td>
+                        <%= aluno.endereco %>
+                    </td>
+                    <td>
+                        <%= aluno.responsavel %>
+                    </td>
+                    <td><a href="/alunos/editarAluno/<%= aluno.matricula %>">Editar</a></td>
+                    <td><a href="/alunos/deletarAluno/<%= aluno.matricula %>">Remover</a></td>
+                  
+
+                </tr>
+                <% }); %>
+        </table>
+        <% } else { %>
+            <p>Nenhum registro cadastrado</p>
+            <% } %>
+    </main>
+</body>
+
+</html>

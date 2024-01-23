@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Cadastro de Alunos</h1>
+        </header>
+        <section>
+            <% aluno.forEach(dado=>{ %>
+                <form method="post" action="/alunos/deletarAluno/<%= dado.matricula %>?_method=DELETE">
+
+                    <label for="matricula">Matrícula:</label>
+                    <input type="text" id="matricula" name="matricula" value="<%=dado.matricula %>" disabled>
+
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" value="<%=dado.nome %>"disabled>
+
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" value="<%=dado.email %>"disabled>
+
+
+                    <label for="turma">Turma:</label>
+                    <input type="text" id="turma" name="turma" value="<%=dado.turma %>"disabled>
+
+
+                    <label for="sexo">Sexo:</label>
+                    <input type="text" id="sexo" name="sexo" value="<%=dado.sexo %>"disabled>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" value="<%=dado.telefone %>"disabled>
+
+
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" value="<%=dado.endereco %>"disabled>
+
+
+                    <label for="responsavel">Responsável:</label>
+                    <input type="text" id="responsavel" name="responsavel" value="<%=dado.responsavel %>"disabled>
+
+                    <input type="submit" value="Excluir">
+                    <button><a href="/alunos/listarAlunos">Cancelar</a></button>
+
+                </form>
+                <% }) %>
+
+        </section>
+    </main>
+</body>
+
+</html>

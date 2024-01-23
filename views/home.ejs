@@ -1,0 +1,64 @@
+<!-- index.ejs -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Escola</title>
+    <meta name="description" content="Bem-vindo à nossa escola. Encontre informações sobre nossos alunos e saiba mais sobre nós.">
+    <meta name="keywords" content="escola, alunos, educação, cadastro">
+    <meta name="author" content="Nome da Sua Escola">
+    <!-- Adicione outras meta tags conforme necessário para SEO -->
+
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Escola</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/listar-alunos">Listar Alunos</a></li>
+            <li><a href="/cadastrar-aluno">Cadastrar Aluno</a></li>
+            <li><a href="/sobre-nos">Sobre Nós</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Bem-vindo à Nossa Escola</h2>
+            <p>Conheça nossos alunos, explore oportunidades educacionais e descubra mais sobre nós.</p>
+            <a href="/listar-alunos"><button>Ver Alunos</button></a>
+            <a href="/cadastrar-aluno"><button>Cadastrar Aluno</button></a>
+        </section>
+
+        <section id="listar-alunos">
+            <h2>Listar Alunos</h2>
+            <p>Explore a lista de alunos matriculados em nossa escola.</p>
+            <!-- Adicione conteúdo de listar alunos conforme necessário -->
+        </section>
+
+        <section id="cadastrar-aluno">
+            <h2>Cadastrar Aluno</h2>
+            <p>Preencha o formulário abaixo para cadastrar um novo aluno.</p>
+            <form method="post" action="/alunos/cadastrar">
+                <!-- Adicione campos do formulário conforme necessário -->
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section id="sobre-nos">
+            <h2>Sobre Nós</h2>
+            <p>Saiba mais sobre nossa escola e nossa missão na educação.</p>
+            <!-- Adicione conteúdo sobre nós conforme necessário -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nome da Sua Escola. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

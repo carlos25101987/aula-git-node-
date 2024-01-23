@@ -1,0 +1,48 @@
+###
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/alunos
+
+
+###
+post http://localhost:3000/alunos/cadastro
+content-type: application/json
+
+{
+    "nome": "sample",
+    "email": "123456",
+    "turma":"A",
+    "sexo":"M",
+    "telefone":"999999999",
+    "endereco":"rua nova assuncao",
+    "responsavel":"Roberto",
+    "matricula":"456757"
+}
+
+###
+
+GET http://localhost:3000/alunos/listarAlunos
+
+
+###
+
+GET http://localhost:3000/alunos/buscarAlunos/456757
+
+
+
+###
+PUT  http://localhost:3000/alunos/editarAluno/456757
+Content-Type: application/json
+
+{
+    "nome": "mano veio",
+    "email": "manoveio@gmail.com",
+    "turma":"z",
+    "sexo":"M",
+    "telefone":"8488888888",
+    "endereco":"chico bateu no bode",
+    "responsavel":"chapeuzinho"
+}
+###
+DELETE http://localhost:3000/alunos/deletarAluno/456757
