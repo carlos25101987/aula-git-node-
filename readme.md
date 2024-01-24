@@ -6,7 +6,7 @@ NodeDB é uma aplicação Node.js projetada para gerenciamento de banco de dados
 ## Instalação
 Para começar com o NodeDB, siga estes passos:
 
-1. Clone o repositório: `git clone <aula-git-node>`
+1. Clone o repositório: `git clone <https://github.com/carlos25101987/aula-git-node-.git>`
 2. Navegue até o diretório do projeto: `cd nodedb`
 3. Instale as dependências: `npm install`
 
